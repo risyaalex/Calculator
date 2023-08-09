@@ -19,19 +19,23 @@ let error = document.getElementById("error")
 function add() {
     result.textContent = ""
     error.textContent = ""
+    error.classList.remove("bgerror");
+    result.classList.remove("bgresult");
+
     let parseIntFirstNumber = parseInt(userFirstNumber.value)
     let parseIntSecondNumber = parseInt(userSecondNumber.value)
 
-    console.log(parseIntFirstNumber)
-    console.log(parseIntSecondNumber)
+    console.log(typeof parseIntFirstNumber)
+    console.log(typeof parseIntSecondNumber)
 
-    if (parseIntFirstNumber && parseIntSecondNumber || parseIntFirstNumber === 0 || parseIntSecondNumber === 0) {
+    if (typeof parseIntFirstNumber === "number" && !isNaN(parseIntFirstNumber) && typeof parseIntSecondNumber === "number" && !isNaN(parseIntSecondNumber)) {
 
         let sum = parseIntFirstNumber + parseIntSecondNumber;
-
+        result.classList.add("bgresult");
         result.textContent = `The sum of numbers ${parseIntFirstNumber} and ${parseIntSecondNumber} is ${sum}.`
         
     } else {
+        error.classList.add("bgerror");
         error.textContent = "Please enter the numbers!"
     }
     
@@ -42,18 +46,23 @@ function add() {
 function subtract() {
     result.textContent = ""
     error.textContent = ""
+    error.classList.remove("bgerror");
+    result.classList.remove("bgresult");
+
     let parseIntFirstNumber = parseInt(userFirstNumber.value)
     let parseIntSecondNumber = parseInt(userSecondNumber.value)
 
     console.log(parseIntFirstNumber)
     console.log(parseIntSecondNumber)
 
-    if (parseIntFirstNumber && parseIntSecondNumber || parseIntFirstNumber === 0 || parseIntSecondNumber === 0) {
+    if (typeof parseIntFirstNumber === "number" && !isNaN(parseIntFirstNumber) && typeof parseIntSecondNumber === "number" && !isNaN(parseIntSecondNumber)) {
 
         let subtract = parseIntFirstNumber - parseIntSecondNumber;
+        result.classList.add("bgresult");
         result.textContent = `The difference between the numbers ${parseIntFirstNumber} and ${parseIntSecondNumber} is ${subtract}.`
 
     } else {
+        error.classList.add("bgerror");
         error.textContent = "Please enter the numbers!"
     }
 }
@@ -63,24 +72,30 @@ function subtract() {
 function divide() {
     result.textContent = ""
     error.textContent = ""
+    error.classList.remove("bgerror");
+    result.classList.remove("bgresult");
+
     let parseIntFirstNumber = parseInt(userFirstNumber.value)
     let parseIntSecondNumber = parseInt(userSecondNumber.value)
 
     console.log(parseIntFirstNumber)
     console.log(parseIntSecondNumber)
 
-    if (parseIntFirstNumber && parseIntSecondNumber || parseIntFirstNumber === 0 || parseIntSecondNumber === 0) {
+    if (typeof parseIntFirstNumber === "number" && !isNaN(parseIntFirstNumber) && typeof parseIntSecondNumber === "number" && !isNaN(parseIntSecondNumber)) {
 
         switch (true) {
             case parseIntSecondNumber === 0:
-                result.textContent = `You can't divide by zero! Please enter another value for the second number!`
+                error.classList.add("bgerror");
+                error.textContent = `You can't divide by zero! Please enter another value for the second number!`
                 break;
             default:
                 let divide = parseIntFirstNumber / parseIntSecondNumber;
+                result.classList.add("bgresult");
                 result.textContent = `The quotient of the numbers ${parseIntFirstNumber} and ${parseIntSecondNumber} is ${divide}.`
         }      
 
     } else {
+        error.classList.add("bgerror");
         error.textContent = "Please enter the numbers!"
     }
 }
@@ -90,18 +105,23 @@ function divide() {
 function multiple() {
     result.textContent = ""
     error.textContent = ""
+    error.classList.remove("bgerror");
+    result.classList.remove("bgresult");
+
     let parseIntFirstNumber = parseInt(userFirstNumber.value)
     let parseIntSecondNumber = parseInt(userSecondNumber.value)
 
     console.log(parseIntFirstNumber)
     console.log(parseIntSecondNumber)
 
-    if (parseIntFirstNumber && parseIntSecondNumber || parseIntFirstNumber === 0 || parseIntSecondNumber === 0) {
+    if (typeof parseIntFirstNumber === "number" && !isNaN(parseIntFirstNumber) && typeof parseIntSecondNumber === "number" && !isNaN(parseIntSecondNumber)) {
 
         let multiple = parseIntFirstNumber * parseIntSecondNumber;
+        result.classList.add("bgresult");
         result.textContent = `The product of the numbers ${parseIntFirstNumber} and ${parseIntSecondNumber} is ${multiple}.`
 
     } else {
+        error.classList.add("bgerror");
         error.textContent = "Please enter the numbers!"
     }
 }
