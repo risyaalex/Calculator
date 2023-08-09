@@ -13,6 +13,7 @@ let userFirstNumber = document.getElementById("firstNumber")
 let userSecondNumber = document.getElementById("secondNumber")
 let result = document.getElementById("result")
 let error = document.getElementById("error")
+// 
 
 function add() {
     result.textContent = ""
