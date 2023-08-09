@@ -13,7 +13,8 @@ let userFirstNumber = document.getElementById("firstNumber")
 let userSecondNumber = document.getElementById("secondNumber")
 let result = document.getElementById("result")
 let error = document.getElementById("error")
-// 
+
+// Function of addition
 
 function add() {
     result.textContent = ""
@@ -36,6 +37,8 @@ function add() {
     
 }
 
+// Function of subtraction
+
 function subtract() {
     result.textContent = ""
     error.textContent = ""
@@ -54,6 +57,8 @@ function subtract() {
         error.textContent = "Please enter the numbers!"
     }
 }
+
+// Function of multiplication
 
 function divide() {
     result.textContent = ""
@@ -79,6 +84,8 @@ function divide() {
         error.textContent = "Please enter the numbers!"
     }
 }
+
+// Function of division
 
 function multiple() {
     result.textContent = ""
