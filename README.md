@@ -1,5 +1,5 @@
 # Calculator
-Simple calculator in html, css and js with the ability to add, subtract, multiply, and divide
+Simple calculator in HTML, CSS, and JS with the ability to add, subtract, multiply, and divide
 
 ![image](https://github.com/risyaalex/Calculator/assets/140414559/8e259daa-aeec-4ebc-b94e-6aa85a90f947)
 
